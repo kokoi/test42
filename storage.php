@@ -13,7 +13,6 @@ public static function storage($source) {
             $offset += strlen($result['match']);
         }
     }
- 
     return $tokens;
 }
 
