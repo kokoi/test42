@@ -31,7 +31,7 @@ class ListParser extends Parser {
         }
         else {
             throw new Exception("Expecting name or list :Found "  . $this->lookahead);
-        }
+             }
     }
 }
 
