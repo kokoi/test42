@@ -30,7 +30,7 @@ class ListParser extends Parser {
             $this->rlist();
         }
         else {
-            throw new Exception("Expecting name or list : Found "  . $this->lookahead);
+            throw new Exception("Expecting name or list :Found "  . $this->lookahead);
         }
     }
 }
