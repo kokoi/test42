@@ -1,5 +1,3 @@
-<?php
-
 class Token {
     public $type;
     public $text;
@@ -15,4 +13,3 @@ class Token {
     }
 }
 
-?>
