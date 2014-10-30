@@ -1,3 +1,4 @@
+<?php
 //retour un array de tokken en prenant un array de caractères
 public static function storage($source) {
     $tokens = array();
@@ -33,3 +34,4 @@ protected static function _match($line, $number, $offset) {
  
     return false;
 }
+?>
