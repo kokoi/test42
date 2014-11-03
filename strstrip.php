@@ -1,19 +1,24 @@
 <?php
-static void strstrip(char * s)
-{
-    if (s==NULL) return ;
-
-    char *last = s + strlen(s);
-    char *dest = s;
-
-    while (isspace((int)*s) && *s) s++;
-    while (last > s) {
-        if (!isspace((int)*(last-1)))
-            break ;
-        last -- ;
-    }
-    *last = (char)0;
-
-    memmove(dest, s, last - s + 1);
-}
+  function arraytolower($array, $include_leys=false) { 
+    
+    if($include_leys) { 
+      foreach($array as $key => $value) { 
+        if(is_array($value)) 
+          $array2[strtolower($key)] = arraytolower($value, $include_leys); 
+        else 
+          $array2[strtolower($key)] = strtolower($value); 
+      } 
+      $array = $array2; 
+    } 
+    else { 
+      foreach($array as $key => $value) { 
+        if(is_array($value)) 
+          $array[$key] = arraytolower($value, $include_leys); 
+        else 
+          $array[$key] = strtolower($value);   
+      } 
+    } 
+    
+    return $array; 
+  } 
 ?>
